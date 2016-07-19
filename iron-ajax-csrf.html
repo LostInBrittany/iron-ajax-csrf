@@ -51,6 +51,10 @@ Besides the CSRF part, the element works as the standard `iron-ajax` element.
       debounce-duration="{{debounceDuration}}"
       json-prefix="{{jsonPrefix}}"
       bubbles="{{bubbles}}"
+      on-request="_handleOnRequest"
+      on-response="_handleOnResponse"
+      on-request="_handleOnRequest"
+      on-error="_handleOnError"
     ></iron-ajax>
   </template>
   
@@ -322,6 +326,21 @@ Besides the CSRF part, the element works as the standard `iron-ajax` element.
         }
       },       
       
+      _handleOnRequest: function(evt, obj) {
+        evt.stopPropagation;        
+        this.fire('request', obj, {bubbles: this.bubbles});
+      },
+      
+      _handleOnResponse: function(evt, obj) {
+        evt.stopPropagation;        
+        this.fire('response', obj, {bubbles: this.bubbles});
+      },
+      
+      _handleOnError: function(evt, obj) {
+        evt.stopPropagation;        
+        this.fire('error', obj, {bubbles: this.bubbles});
+      },
+
 
       /**
        * The query string that should be appended to the `url`, serialized from
