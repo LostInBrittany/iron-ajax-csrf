@@ -14,3 +14,5 @@ and automatizes the management of the CSRF token (stored using `iron-meta-token`
         debounce-duration="300"></iron-ajax>
         
 Besides the CSRF part, the element works as the standard `iron-ajax` element.
+
+Inspired by [`iron-form-csrf`](https://github.com/Zecat/iron-form-csrf)
