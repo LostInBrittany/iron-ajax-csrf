@@ -1,0 +1,36 @@
+{
+  "name": "iron-ajax-csrf",
+  "authors": [
+    "Horacio Gonzalez <horacio.gonzalez@gmail.com>"
+  ],
+  "description": "Convenient element to add a CSRF token as a header to your ajax requests",
+  "main": "iron-ajax-csrf.html",
+  "keywords": [
+    "web-components",
+    "polymer",
+    "iron-ajax",
+    "csrf",
+    "ajax"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/LostInBrittany/iron-ajax-csrf/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.6.0",
+    "iron-ajax": "PolymerElements/iron-ajax#^1.4.0",
+    "iron-meta": "PolymerElements/iron-meta#^1.1.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^3.4.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#~1.0.3",
+    "paper-styles": "PolymerElements/paper-styles#~1.1.2",
+    "paper-checkbox": "PolymerElements/paper-checkbox#~1.1.0"
+  }
+}

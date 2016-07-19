@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-meta/iron-meta.html">
+
+<script>
+  Polymer({
+    is: "iron-meta-query-token",
+
+    properties: {
+      header: {
+        type: String,
+        value: null,
+        notify: true
+      },
+      token: {
+        type: String,
+        value: null,
+        notify: true
+      },
+    },
+    
+    ready: function() {
+      var ironMetaQuery = new Polymer.IronMetaQuery({key: 'csrfToken'});  
+      if (ironMetaQuery.value 
+          && (ironMetaQuery.value.header) 
+          && (ironMetaQuery.value.token)) {
+        this.header = ironMetaQuery.value.header;
+        this.token = ironMetaQuery.value.token;
+        console.debug("[iron-meta-query-token] ", {header: this.header, token: this.token});
+      } else {
+        console.warn('[iron-meta-query-token] In order to send the CSRF token in yout AJAX requests, you must provide the CSRF token header name and token value by using <iron-meta-token>.');
+      }
+    }
+    
+  });
+</script>
+  
