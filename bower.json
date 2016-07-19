@@ -3,7 +3,7 @@
   "authors": [
     "Horacio Gonzalez <horacio.gonzalez@gmail.com>"
   ],
-  "description": "Convenient elements to add CSRF token to your ajax requests.",
+  "description": "Convenient element to add a CSRF token as a header to your ajax requests",
   "main": "iron-ajax-csrf.html",
   "keywords": [
     "web-components",
@@ -24,7 +24,7 @@
   "dependencies": {
     "polymer": "Polymer/polymer#^1.6.0",
     "iron-ajax": "PolymerElements/iron-ajax#^1.4.0",
-    "iron-meta": "^1.1.1"
+    "iron-meta": "PolymerElements/iron-meta#^1.1.1"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
