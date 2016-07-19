@@ -1,0 +1,43 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-meta/iron-meta.html">
+
+
+<dom-module is="iron-meta-token">
+  <template>
+    <iron-meta 
+      id="csrfTokenStore"
+      key="csrfToken"
+      value="[[_csrfToken]]" 
+    ></iron-meta>
+  </template>
+  
+  <script>
+  
+    Polymer({
+      
+      is: 'iron-meta-token',
+      
+      properties: {
+        header: {
+          type: String,
+          value: "X-CSRFToken"
+        },
+        token: {
+          type: String,
+          value: ""
+        },
+        _csrfToken: {
+          type: Object,
+          computed: '_getCsrfToken(header,token)'
+        }
+      },
+      _getCsrfToken: function() {
+        return {
+          header: this.header,
+          token: this.token
+        }
+      },      
+    });  
+  
+  </script>
+</dom-module>
