@@ -416,7 +416,7 @@ Besides the CSRF part, the element works as the standard `iron-ajax` element.
         if (csrfToken) {
           headersWithCSRF[csrfHeader] = csrfToken;
         } 
-        console.debug("[iron-ajax-csrf] headers", headersWithCSRF);
+        // console.debug("[iron-ajax-csrf] headers", headersWithCSRF);
         return headersWithCSRF;        
       }
     });
