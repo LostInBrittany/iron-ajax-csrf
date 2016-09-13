@@ -234,16 +234,14 @@ Besides the CSRF part, the element works as the standard `iron-ajax` element.
          */
         lastRequest: {
           type: Object,
-          notify: true,
-          readOnly: true
+          notify: true
         },
         /**
          * True while lastRequest is in flight.
          */
         loading: {
           type: Boolean,
-          notify: true,
-          readOnly: true
+          notify: true
         },
         /**
          * lastRequest's response.
@@ -259,8 +257,7 @@ Besides the CSRF part, the element works as the standard `iron-ajax` element.
          */
         lastResponse: {
           type: Object,
-          notify: true,
-          readOnly: true
+          notify: true
         },
         /**
          * lastRequest's error, if any.
@@ -269,8 +266,7 @@ Besides the CSRF part, the element works as the standard `iron-ajax` element.
          */
         lastError: {
           type: Object,
-          notify: true,
-          readOnly: true
+          notify: true
         },
         /**
          * An Array of all in-flight requests originating from this iron-ajax
@@ -278,8 +274,7 @@ Besides the CSRF part, the element works as the standard `iron-ajax` element.
          */
         activeRequests: {
           type: Array,
-          notify: true,
-          readOnly: true,
+          notify: true
           value: function() {
             return [];
           }
